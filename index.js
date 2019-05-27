@@ -6,7 +6,7 @@ var fA, fB, fC, fD;
 // ax^2 + bx + c
 var qA, qB, qC;
 
-var url = "http://latex.codecogs.com/gif.latex?\\huge&space;";
+var url = "https://latex.codecogs.com/gif.latex?\\huge&space;";
 
 function generate(event){
     fA = Math.ceil(Math.random()*5);
