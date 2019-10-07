@@ -1,18 +1,17 @@
 var quadraticElement = document.getElementById("quadratic");
 var solutionElement = document.getElementById("solution");
-// (ax + b)(cx + d)
-var fA, fB, fC, fD;
 
-// ax^2 + bx + c
+var fA, fB, fC, fD;
 var qA, qB, qC;
 
 var url = "https://latex.codecogs.com/gif.latex?\\huge&space;";
 
+function getRandomNums() {
+  return Math.ceil(Math.random()*5);
+}
+
 function generate(event){
-    fA = Math.ceil(Math.random()*5);
-    fB = Math.ceil(Math.random()*5);
-    fC = Math.ceil(Math.random()*5);
-    fD = Math.ceil(Math.random()*5);
+    [fA, fB, fC, fD] = [getRandomNums(), getRandomNums(), getRandomNums(), getRandomNums()];
     qA = fA * fC;
     qB = fA * fD + fB * fC;
     qC = fB * fD;
@@ -25,11 +24,10 @@ function generate(event){
     sSource = sSource.replace("1x", "x");
     solutionElement.src = sSource;
 
-
     solutionElement.style.visibility = "hidden";
 }
 
-function solution(event){
+function solve(event){
     solutionElement.style.visibility = "visible";
 }
 
